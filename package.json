@@ -12,6 +12,8 @@
     "types/*"
   ],
   "scripts": {
+    "dev1": "lerna run --stream dev",
+    "serve1": "lerna run --stream serve",
     "build:type": "rimraf types && tsc -p ./tsconfig.type.json",
     "release": "npm run test && standard-version && npm run build && npm pub && git push",
     "release-no-test": "standard-version && npm run build && npm pub && git push",
@@ -40,6 +42,7 @@
     "chalk": "^2.4.2",
     "gh-pages": "^2.0.1",
     "jest": "^24.7.1",
+    "lerna": "^3.19.0",
     "rimraf": "^2.6.2",
     "rollup": "^0.67.1",
     "rollup-plugin-commonjs": "^9.2.0",
@@ -49,6 +52,7 @@
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-terser": "^5.1.1",
     "rollup-plugin-typescript": "^1.0.0",
+    "@rollup/plugin-alias": "^2.2.0",
     "shelljs": "^0.8.3",
     "standard-version": "^4.4.0",
     "ts-jest": "^24.0.2",
